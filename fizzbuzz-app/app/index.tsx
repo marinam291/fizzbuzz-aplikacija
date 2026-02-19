@@ -96,8 +96,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-    fontFamily: 'Betania Patmos',
-    fontWeight: 'normal',
+    fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 40,
     color: '#333',

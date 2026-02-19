@@ -1,15 +1,7 @@
 **/node_modules/
-
 .expo/
 fizzbuzz-app/.expo/
 fizzbuzz-app/dist/
-
 **/.env
-**/.env.local
-
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 .DS_Store
-Thumbs.db

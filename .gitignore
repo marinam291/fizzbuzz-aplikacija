@@ -5,3 +5,4 @@ fizzbuzz-app/dist/
 **/.env
 npm-debug.log*
 .DS_Store
+.env

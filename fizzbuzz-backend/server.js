@@ -19,15 +19,6 @@ const pool = mysql.createPool({
   queueLimit: 0
 });
 
-pool.getConnection((err, conn) => {
-  if (err) {
-    console.error('❌ Greška pri povezivanju na MySQL:', err.message);
-  } else {
-    console.log('✅ Uspješno povezano na MySQL bazu!');
-    conn.release();
-  }
-});
-
 app.get('/api/leaderboard', (req, res) => {
   const sql = 'SELECT name, score, totalTime FROM scores ORDER BY score DESC, totalTime ASC';
 

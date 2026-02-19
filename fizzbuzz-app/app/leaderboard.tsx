@@ -108,7 +108,7 @@ export default function LeaderboardScreen() {
       <View style={styles.buttonsContainer}>
         <TouchableOpacity 
           style={styles.button} 
-          onPress={() => router.push('/')}
+          onPress={() => router.replace('/')}
         >
           <Text style={styles.buttonText}>Back to Home</Text>
         </TouchableOpacity>

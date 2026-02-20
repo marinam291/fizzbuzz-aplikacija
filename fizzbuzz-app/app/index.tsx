@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getLeaderboard } from '../services/api';
-
 import { Trophy } from 'lucide-react-native';
+import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 
 type Player ={
   name: string;
@@ -13,9 +13,11 @@ type Player ={
 export default function HomeScreen() {
   const router = useRouter();
   const [username, setUsername] = useState('');
-  
   const [topPlayers, setTopPlayers] = useState<Player[]>([]);
   const [error, setError] = useState('');
+  const [fontsLoaded] = useFonts({
+    'Pacifico': Pacifico_400Regular,
+  });
 
   useEffect(() => {
     loadTopPlayers();
@@ -95,8 +97,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
+    fontSize: 45,
+    fontFamily: 'Pacifico',
     textAlign: 'center',
     marginBottom: 40,
     color: '#333',

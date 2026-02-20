@@ -15,7 +15,6 @@ export default function HomeScreen() {
   const [username, setUsername] = useState('');
   const [topPlayers, setTopPlayers] = useState<Player[]>([]);
   const [error, setError] = useState('');
-
   const [fontsLoaded] = useFonts({
     'Pacifico': Pacifico_400Regular,
   });
